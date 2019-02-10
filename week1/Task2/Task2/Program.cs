@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿using System
 namespace Task2
 {
     class Student

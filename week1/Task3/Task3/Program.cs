@@ -4,23 +4,20 @@ namespace Task3
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            string a = Console.ReadLine();
-            string a2 = Console.ReadLine();
+            string num = Console.ReadLine();
+            string elements = Console.ReadLine();
+            string[] array = elements.Split();
 
-            int n = int.Parse(a);
+            int n = int.Parse(num);
 
-            string[] numsStr = a2.Split();
-
-            for (int i = 0; i < numsStr.Length; ++i)
+            for (int i = 0; i < n; i++)
             {
-                int x = int.Parse(numsStr[i]);
-                for (int j = 0; j < 2; ++j)
-                {
-                    Console.Write(x + " ");
-                }
-
+                Console.Write(array[i] + " ");
+                Console.Write(array[i]);
+                Console.Write(" ");
             }
             Console.ReadKey();
         }

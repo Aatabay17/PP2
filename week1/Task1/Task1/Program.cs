@@ -8,7 +8,7 @@ namespace Task1
         {
             bool ch = true;
             if (a == 1) ch = false;
-            for (int i = 2; i < a; i++)//если число простое,надо проверить не делится ли число до него
+            for (int i = 2; i < a; i++)//если число простое,надо проверить не делится ли число на числа до него
             {
                 if (a % i == 0)
                 {
@@ -20,15 +20,15 @@ namespace Task1
         static void Main(string[] args)
         {
 
-            int n;//создание переменной
-            n = int.Parse(Console.ReadLine());//ввожу массив
-            string s = Console.ReadLine();
-            string[] arr = s.Split();//создаем массив и разибиваю строку s элементы массива
-            int cnt = 0;//создаем переменную для по
+            int n;//создаем переменную
+            n = int.Parse(Console.ReadLine());//вводим массив    5 
+            string s = Console.ReadLine();   
+            string[] arr = s.Split();//создаем массив и разибиваем строку s на элементы массива
+            int cnt = 0;//создаем счетчик
             for (int i = 0; i < n; i++)
             {
                 int c = int.Parse(arr[i]);//преобразовываем элемент массива в число 
-                if (Prime(c) == true)//проверка числа
+                if (Prime(c) == true)//проверка числа 
                 {
                     cnt++;
                 }
@@ -40,7 +40,7 @@ namespace Task1
                 int c = int.Parse(arr[i]);
                 if (Prime(c) == true)
                 {
-                    Console.WriteLine(c + " ");//выводим на экран простые числа через пробел в строке
+                    Console.Write(c + " ");//выводим на экран простые числа через пробел в строке
                 }
             }
             Console.ReadKey();
