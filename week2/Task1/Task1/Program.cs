@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Task1
 {
@@ -7,12 +8,10 @@ namespace Task1
 
        public static bool palindrome(string s)
         {
-            char[] letter = new char[s.Length];
-            letter = s.ToCharArray();
             int length = s.Length;
             for(int i = 0; i < length / 2; i++)
             {
-                if (letter[i] != letter[length - i - 1])
+                if (s[i] != s[length - i - 1])
                     return false;
             }
             return true;
@@ -21,13 +20,23 @@ namespace Task1
 
         static void Main(string[] args)
         {
-            string direction = (@"C:\Users\user\Desktop\PP2\week2\input1.txt");
-            string check = System.IO.File.ReadAllText(direction);
-            if (palindrome(check) == true)
+            string path = ("input.txt");
+            StreamReader sw = new StreamReader(path);
+            string s = sw.ReadLine();
+            sw.Close();
+
+            if (palindrome(s) == true)
             {
-                Console.WriteLine("YES");
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+
             }
             Console.ReadKey();
         }
     }
 }
+
+

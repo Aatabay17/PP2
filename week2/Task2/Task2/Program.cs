@@ -9,60 +9,39 @@ namespace Task2
 {
     class Program
     {
+        
 
-        static bool IsPrime(int x)
+       public static bool IsPrime(int x)
         {
             if (x == 1) return false;
-
-            bool functionResult = true;
 
             for (int i = 2; i < x; ++i)
             {
                 if (x % i == 0)
                 {
-                    functionResult = false;
-                    break;
+                    return false;
                 }
             }
-            return functionResult;
+            return true;
         }
 
-        static bool IsPrimeString(string s)
-        {
-            return IsPrime(int.Parse(s));
-        }
 
         static void Main(string[] args)
         {
-
-            List<string> res = new List<string>();
-
-            FileStream fs = new FileStream(@"C:\Users\user\Desktop\PP2\week2\input2.txt", FileMode.Open, FileAccess.Read);
-            StreamReader sr = new StreamReader(fs);
-
+            StreamReader sr = new StreamReader(@"C:\Users\user\Desktop\PP2\week2\input2.txt");
             string line = sr.ReadLine();
+            sr.Close();
             string[] nums = line.Split(' ');
+            StreamWriter sw = new StreamWriter(@"C:\Users\user\Desktop\PP2\week2\output2.txt");
 
-            foreach (var x in nums)
+            foreach (string x in nums)
             {
-                if (IsPrimeString(x))
+                if (IsPrime(int.Parse(x)) == true)
                 {
-                    res.Add(x);
+                    sw.Write(x + " ");
                 }
             }
-
-            sr.Close();
-            fs.Close();
-            FileStream fs2 = new FileStream(@"C:\Users\user\Desktop\PP2\week2\output2.txt", FileMode.Create, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs2);
-
-            foreach (var x in res)
-            {
-                sw.Write(x + " ");
-                Console.Write(x + " ");
-            }
-             sw.Close();
-            fs2.Close();
+            sw.Close();
         }
     }
 }
