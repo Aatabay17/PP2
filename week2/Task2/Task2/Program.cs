@@ -11,7 +11,7 @@ namespace Task2
     {
         
 
-       public static bool IsPrime(int x)
+       public static bool IsPrime(int x)//create function,which checks for the primes
         {
             if (x == 1) return false;
 
@@ -28,11 +28,11 @@ namespace Task2
 
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(@"C:\Users\user\Desktop\PP2\week2\input2.txt");
-            string line = sr.ReadLine();
+            StreamReader sr = new StreamReader(@"C:\Users\user\Desktop\PP2\week2\input2.txt");//reads our file from a given location 
+            string line = sr.ReadLine();//saves it to a string
             sr.Close();
-            string[] nums = line.Split(' ');
-            StreamWriter sw = new StreamWriter(@"C:\Users\user\Desktop\PP2\week2\output2.txt");
+            string[] nums = line.Split(' ');//Split it in array
+            StreamWriter sw = new StreamWriter(@"C:\Users\user\Desktop\PP2\week2\output2.txt");//write in another file using our function
 
             foreach (string x in nums)
             {

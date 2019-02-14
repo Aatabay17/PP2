@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\Task\\Task.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\Task.csproj",
       "projectName": "Task",
-      "projectPath": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\Task\\Task.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\Task.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\Task\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\PP2\\week3\\Task\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

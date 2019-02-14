@@ -12,13 +12,13 @@ namespace Task4
     {
          static void Main(string[] args)
             {
-                string FilePath1 = @"C:\Users\user\Desktop\Week2\path\file.txt";
-                string FilePath2 = @"C:\Users\user\Desktop\Week2\path1\file.txt";
-                StreamWriter sw = new StreamWriter(FilePath1);
+                string FilePath1 = @"C:\Users\user\Desktop\Week2\path\file.txt";//show a path 
+                string FilePath2 = @"C:\Users\user\Desktop\Week2\path1\file.txt";//show another path
+            StreamWriter sw = new StreamWriter(FilePath1);//creates a file
                 sw.WriteLine("random string");
                 sw.Close();
-                File.Copy(FilePath1, FilePath2);
-                File.Delete(FilePath1);
+                File.Copy(FilePath1, FilePath2);//copies from first one to second 
+            File.Delete(FilePath1);//deletes first one
 
             }
         }

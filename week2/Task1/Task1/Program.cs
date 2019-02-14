@@ -6,7 +6,7 @@ namespace Task1
     class Program
     {
 
-       public static bool palindrome(string s)
+       public static bool palindrome(string s)//create function,which checks for palindrome of the string
         {
             int length = s.Length;
             for(int i = 0; i < length / 2; i++)
@@ -20,9 +20,9 @@ namespace Task1
 
         static void Main(string[] args)
         {
-            string path = ("input.txt");
-            StreamReader sw = new StreamReader(path);
-            string s = sw.ReadLine();
+            string path = ("input.txt");//location
+            StreamReader sw = new StreamReader(path);//reads the file from given direction 
+            string s = sw.ReadLine();//saves to string "s"
             sw.Close();
 
             if (palindrome(s) == true)
