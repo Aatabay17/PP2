@@ -15,7 +15,7 @@ namespace Task4
                 string FilePath1 = @"C:\Users\user\Desktop\Week2\path\file.txt";//show a path 
                 string FilePath2 = @"C:\Users\user\Desktop\Week2\path1\file.txt";//show another path
             StreamWriter sw = new StreamWriter(FilePath1);//creates a file
-                sw.WriteLine("random string");
+                
                 sw.Close();
                 File.Copy(FilePath1, FilePath2);//copies from first one to second 
             File.Delete(FilePath1);//deletes first one

@@ -2,46 +2,30 @@
 
 namespace Task2
 {
-    class Student
+    class Student//create class
     {
-        public string Name, ID;
-        public int year;
+      
+            public string name;//name of student
+            public string id;//ID if student
+            public int year = 1;//year of student
 
-        public Student(string Name, string ID)//Creating a constrictor,which includes 2 parameteres
-        {
-            this.Name = Name;
-            this.ID = ID;
-            this.year = 1;
+            public Student(string name, string id)//create a constructor
+            {
+                this.name = name;//name will be our name in constructor 
+                this.id = id;//the same as with name
+            }
+            public void print()//function which prints
+            {
+                year += 1;//increases year
+                Console.WriteLine(name + " " + id + " " + year);//prints our name,id and year
+            }
         }
-
-        public string getName()
+        class Program
         {
-            return this.Name;
-        }
-        public string getID()
-        {
-            return this.ID;
-        }
-    
-        public void Increment()
-        {
-            this.year++;
-        }
-
-        public override string ToString()
-        {
-            return this.Name + " " + this.ID + " " + this.year;
-        }
-    }
-
-    class Program
-    {
         static void Main(string[] args)
         {
-            Student s = new Student("Alim", "18BD110323");//we use our constructor and give values to each parameter
-            s.Increment();
-            Console.WriteLine(s);
-            Console.ReadKey();
+            Student st1 = new Student("Alim", "18BD110323");//create new class student and give parameters 
+            st1.print();//call our function
+        }
         }
     }
-}

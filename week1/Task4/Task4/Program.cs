@@ -7,10 +7,10 @@ namespace Task4
         static void Main(string[] args)
         {
 
-            int n = int.Parse(Console.ReadLine());//size of a picture
-            for (int i = 0; i < n; i++)
+            int n = int.Parse(Console.ReadLine());//give a size
+            for (int i = 0; i < n; i++)//create first loop
             {
-                for (int j = 0; j < i + 1; j++)
+                for (int j = 0; j < i + 1; j++)//create second one
                 {
                     Console.Write("* ");
                 }

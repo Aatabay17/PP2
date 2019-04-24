@@ -20,8 +20,7 @@ namespace Task1
 
         static void Main(string[] args)
         {
-            string path = ("input.txt");//location
-            StreamReader sw = new StreamReader(path);//reads the file from given direction 
+            StreamReader sw = new StreamReader("input.txt");//reads the file from given direction 
             string s = sw.ReadLine();//saves to string "s"
             sw.Close();
 

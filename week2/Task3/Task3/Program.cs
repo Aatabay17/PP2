@@ -38,7 +38,7 @@ namespace Task3
         static void Main(string[] args)
         {
             DirectoryInfo d = new DirectoryInfo("/Users/user/Desktop/PP2/week2");
-            task(d, 1);
+            task(d, 0);
             Console.ReadKey();
         }
     }

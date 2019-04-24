@@ -18,10 +18,8 @@ namespace Task1
             return ch;
         }
         static void Main(string[] args)
-        {
-
-            int n;
-            n = int.Parse(Console.ReadLine());//size of array
+        { 
+            int n = int.Parse(Console.ReadLine());//size of array
             string s = Console.ReadLine();   
             string[] arr = s.Split();//split our elements
             int cnt = 0;//counter
@@ -47,3 +45,10 @@ namespace Task1
         }
     }
 }
+
+ 
+
+
+
+
+
