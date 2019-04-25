@@ -220,6 +220,106 @@ namespace Calculator
             {
                 resultNumber = (double.Parse(resultNumber) / double.Parse(tempNumber)).ToString();
             }
+            else if (operation == "^")
+            {
+                resultNumber = (Math.Pow(double.Parse(resultNumber), double.Parse(tempNumber))).ToString();
+            }
+            else if (operation == "GCD")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                List<int> anum = new List<int>();
+                List<int> bnum = new List<int>();
+                for (int i = 2; i < a; i++)
+                {
+                    if (a % i == 0)
+                    {
+                        anum.Add(i);
+                    }
+                }
+                for (int i = 2; i < b; i++)
+                {
+                    if (b % i == 0)
+                    {
+                        bnum.Add(i);
+                    }
+                }
+                for (int i = 0; i < anum.Count; i++)
+                {
+                    for (int j = 0; j < bnum.Count; j++)
+                    {
+                        if (anum[i] == bnum[j])
+                        {
+                            resultNumber = anum[i] + "";
+                            return;
+                        }
+                    }
+                }
+                resultNumber = "1";
+        }
+            else if (operation == "prime")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                int cnt = 0;
+               
+                for(int i = b; i <=a; i++)
+                {
+                    if (IsPrime(i))
+                    {
+                        cnt++;
+                    }
+                }
+                resultNumber = cnt + "";
+            }
+            else if (operation == "sum")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                int sum = 0;
+                for(int i = b; i <= a; i++)
+                {
+                    sum = sum + i;
+                }
+                resultNumber = sum + "";
+            }
+            else if (operation == "mod")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                resultNumber = a % b + "";
+            }
+            else if (operation == "x^y")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                int k = 1;
+                for(int i = 1; i <= a; i++)
+                {
+                    k = k * b;
+                }
+                resultNumber = k + "";
+            }
+            else if (operation == "SP")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                int sump = 0;
+                for(int i = b; i <= a; i++)
+                {
+                    if (IsPrime(i))
+                    {
+                        sump += i;
+                    }
+                }
+                resultNumber = sump + "";
+            }
+            else if(operation== "y√x")
+            {
+                int a = int.Parse(tempNumber);
+                int b = int.Parse(resultNumber);
+                resultNumber=Math.Pow(b, 1 / a)+"";
+            }
         }
         void QuickCalulation()
         {
